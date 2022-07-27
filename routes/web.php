@@ -3,6 +3,7 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use PHPUnit\TextUI\XmlConfiguration\Group;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,26 +16,38 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('admin', function() {
-    return 'Hi Admin';
-})->middleware('role:admin');
+// Route::get('admin', function() {
+//     return 'Hi Admin';
+// })->middleware('role:admin');
 
-Route::get('user', function() {
-    return 'Hi User';
-})->middleware('role:user');
+// Route::get('user', function() {
+//     return 'Hi User';
+// })->middleware('role:user');
 
 
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
+// Route::get('/', function () {
+//     return Inertia::render('Welcome', [
+//         'canLogin' => Route::has('login'),
+//         'canRegister' => Route::has('register'),
+//         'laravelVersion' => Application::VERSION,
+//         'phpVersion' => PHP_VERSION,
+//     ]);
+// });
+
+Route::redirect('/', '/prototype/login');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::prefix('prototype')->name('prototype.')->group(function (){
+    Route::get('/login', function (){
+        return inertia::render('Prototype/Login');
+    })->name('login');
+
+    Route::get('/register', function (){
+        return inertia::render('Prototype/Register');
+    })->name('register');
+});
 
 require __DIR__.'/auth.php';
