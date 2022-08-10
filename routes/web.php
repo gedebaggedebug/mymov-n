@@ -16,7 +16,7 @@ use PHPUnit\TextUI\XmlConfiguration\Group;
 |
 */
 
-Route::redirect('/', '/prototype/login');
+Route::redirect('/', '/login');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
