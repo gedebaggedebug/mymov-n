@@ -22,7 +22,7 @@ class MovieTableSeeder extends Seeder
                 'category' => 'Drama',
                 'video_url' => 'https://www.youtube.com/watch?v=mYBCjh-3rw4',
                 'thumbnail' => 'https://sindunesia.com/wp-content/uploads/2021/01/gambar-sketsa-minion-keren.jpg',
-                'rating' => 8.3,
+                'rating' => 4.3,
                 'is_featured' => 1,
             ],
             [
@@ -31,7 +31,7 @@ class MovieTableSeeder extends Seeder
                 'category' => 'Romantis',
                 'video_url' => 'https://www.youtube.com/watch?v=D4k-puf08CE&list=RDGMEMQ1dJ7wXfLlqCjwV0xfSNbAVMD4k-puf08CE&start_radio=1',
                 'thumbnail' => 'https://sindunesia.com/wp-content/uploads/2021/01/gambar-sketsa-minion-keren.jpg',
-                'rating' => 9.3,
+                'rating' => 4.7,
                 'is_featured' => 0,  
             ],
             [
@@ -39,8 +39,8 @@ class MovieTableSeeder extends Seeder
                 'slug' => 'aco-raja-jalanan',
                 'category' => 'Drama',
                 'video_url' => 'https://www.youtube.com/watch?v=1N1lwZjoZ48',
-                'thumbnail' => 'https://sindunesia.com/wp-content/uploads/2021/01/gambar-sketsa-minion-keren.jpg',
-                'rating' => 8.3,
+                'thumbnail' => 'https://id.pinterest.com/pin/959477895587225484/',
+                'rating' => 4.0,
                 'is_featured' => 0,
             ]
             ];
