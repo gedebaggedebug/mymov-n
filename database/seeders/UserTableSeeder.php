@@ -16,7 +16,7 @@ class UserTableSeeder extends Seeder
     public function run()
     {
         $admin = User::create([
-            'name' => 'Admin',
+            'name' => 'admin',
             'email' => 'admin@mymov.test',
             'password' => bcrypt('password')
         ]);
