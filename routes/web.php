@@ -19,6 +19,8 @@ use PHPUnit\TextUI\XmlConfiguration\Group;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// MIDTRANS ROUTE
+Route::post('midtrans/notification', [SubscriptionPlanController::class, 'midtransCallback']);
 
 Route::redirect('/', '/login');
 
